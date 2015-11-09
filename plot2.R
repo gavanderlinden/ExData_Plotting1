@@ -10,6 +10,7 @@ rm(rawData)
 
 # change other types
 df$Global_active_power <- as.numeric(df$Global_active_power)
+df$DateTime <- ymd_hms(paste(df$Date, df$Time))
 
 # have to set locale because I am on a german system
 Sys.setlocale("LC_TIME", "C")

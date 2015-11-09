@@ -10,6 +10,7 @@ rm(rawData)
 
 # change other types
 df$Global_active_power <- as.numeric(df$Global_active_power)
+df$DateTime <- ymd_hms(paste(df$Date, df$Time))
 df$Sub_metering_1 <- as.numeric(df$Sub_metering_1)
 df$Sub_metering_2 <- as.numeric(df$Sub_metering_2)
 df$Sub_metering_3 <- as.numeric(df$Sub_metering_3)
